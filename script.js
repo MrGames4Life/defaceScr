@@ -1,53 +1,32 @@
 (function() {
-  var newHTML = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hackeado por el Culto Misterioso</title>
-<style>
-body {
-  background-color: #000;
-  color: #0f0;
-  font-family: monospace;
-  text-align: center;
-}
+  var newHTML = [];
+  newHTML.push('<!DOCTYPE html>');
+  newHTML.push('<html lang="en">');
+  newHTML.push('<head>');
+  newHTML.push('<meta charset="UTF-8">');
+  newHTML.push('<meta name="viewport" content="width=device-width, initial-scale=1.0">');
+  newHTML.push('<title>Hackeado por el Culto Misterioso</title>');
+  newHTML.push('<style>');
+  newHTML.push('body { background-color: #000; color: #0f0; font-family: monospace; text-align: center; }');
+  newHTML.push('.container { margin-top: 100px; }');
+  newHTML.push('.text { font-size: 24px; }');
+  newHTML.push('.blink { animation: blink-animation 1s steps(5, start) infinite; }');
+  newHTML.push('@keyframes blink-animation { to { visibility: hidden; } }');
+  newHTML.push('</style>');
+  newHTML.push('</head>');
+  newHTML.push('<body>');
+  newHTML.push('<div class="container">');
+  newHTML.push('<h1>Hackeado por el Culto Misterioso</h1>');
+  newHTML.push('<p class="text">Estamos vigilando tus movimientos...</p>');
+  newHTML.push('<p class="text">No puedes escapar de nosotros...</p>');
+  newHTML.push('<p class="text">Nuestra influencia es omnipresente...</p>');
+  newHTML.push('<p class="text">Tu destino está sellado...</p>');
+  newHTML.push('<p class="text">¡Prepárate para enfrentar las consecuencias!</p>');
+  newHTML.push('<p class="text blink">...........................</p>');
+  newHTML.push('</div>');
+  newHTML.push('</body>');
+  newHTML.push('</html>');
 
-.container {
-  margin-top: 100px;
-}
-
-.text {
-  font-size: 24px;
-}
-
-.blink {
-  animation: blink-animation 1s steps(5, start) infinite;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-</style>
-</head>
-<body>
-<div class="container">
-  <h1>Hackeado por el Culto Misterioso</h1>
-  <p class="text">Estamos vigilando tus movimientos...</p>
-  <p class="text">No puedes escapar de nosotros...</p>
-  <p class="text">Nuestra influencia es omnipresente...</p>
-  <p class="text">Tu destino está sellado...</p>
-  <p class="text">¡Prepárate para enfrentar las consecuencias!</p>
-  <p class="text blink">...........................</p>
-</div>
-</body>
-</html>
-`;
-
-  document.open();
-  document.write(newHTML);
-  document.close();
+  var htmlStr = newHTML.join('');
+  document.body.innerHTML = htmlStr;
 })();
